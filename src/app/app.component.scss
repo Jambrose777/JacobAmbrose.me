@@ -12,14 +12,14 @@
     width: 100px;
     margin-right: 10px;
     background-color: $grey;
-    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.4);
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
   }
   
   .profile-section {
     height: 100%;
     width: calc((100% - 110px) * .5);
     background-color: $grey;
-    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.4);
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
   }
 
   .content-section {
@@ -29,5 +29,6 @@
     margin-bottom: 20px;
     background-color: $grey;
     z-index: -1; // this is to ensure box-shadow on profile section is shown over the content section
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
   }
 }
