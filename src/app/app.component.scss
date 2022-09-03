@@ -1,0 +1,33 @@
+@import "src/styles/color-pallet.scss";
+
+.project-container {
+  display: flex;
+  flex-direction: row;
+  margin: 40px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
+
+  .main-nav-section {
+    height: 60%;
+    width: 100px;
+    margin-right: 10px;
+    background-color: $grey;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.4);
+  }
+  
+  .profile-section {
+    height: 100%;
+    width: calc((100% - 110px) * .5);
+    background-color: $grey;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.4);
+  }
+
+  .content-section {
+    height: calc(100vh - 120px);
+    width: calc((100% - 110px) * .5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $grey;
+    z-index: -1; // this is to ensure box-shadow on profile section is shown over the content section
+  }
+}
