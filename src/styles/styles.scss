@@ -1,0 +1,7 @@
+@import "color-pallet.scss";
+
+body {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  background: linear-gradient(to left top, $dark-blue, $aqua);
+}

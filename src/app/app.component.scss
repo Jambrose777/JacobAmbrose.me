@@ -13,6 +13,9 @@
     margin-right: 10px;
     background-color: $grey;
     box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
   }
   
   .profile-section {
@@ -20,6 +23,9 @@
     width: calc((100% - 110px) * .5);
     background-color: $grey;
     box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
   }
 
   .content-section {
@@ -30,5 +36,8 @@
     background-color: $grey;
     z-index: -1; // this is to ensure box-shadow on profile section is shown over the content section
     box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
+    border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
   }
 }
