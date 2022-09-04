@@ -36,10 +36,10 @@ import { SheetsComponent } from './components/pages/projects/sheets/sheets.compo
 const moduleRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'about' },
   { path: 'about', component: AboutComponent, data: {animation: 'about'}, children: [
-    { path: '', pathMatch: 'full', component: AboutMeComponent },
-    { path: 'hobbies', component: HobbiesComponent },
-    { path: 'life', component: LifeComponent },
-    { path: 'me', component: AboutMeComponent },
+    { path: '', pathMatch: 'full', component: AboutMeComponent, data: {animation: 'me'} },
+    { path: 'hobbies', component: HobbiesComponent, data: {animation: 'hobbies'} },
+    { path: 'life', component: LifeComponent, data: {animation: 'life'} },
+    { path: 'me', component: AboutMeComponent, data: {animation: 'me'} },
   ] },
   { path: 'contact-me', component: ContactMeComponent, data: {animation: 'contact-me'}  },
   { path: 'education', component: EducationComponent, data: {animation: 'education'}  },

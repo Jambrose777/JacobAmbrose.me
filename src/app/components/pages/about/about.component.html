@@ -3,5 +3,7 @@
     <h2 class="page-title">About Me</h2>
     <sub-nav class="sub-nav" [navItems]="navItems" [baseRoute]="'about'"></sub-nav>
   </div>
-  <router-outlet></router-outlet>
+  <div class="content-section" [@subContentAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
 </div>

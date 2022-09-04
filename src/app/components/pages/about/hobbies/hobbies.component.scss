@@ -1,0 +1,114 @@
+@import "src/styles/color-pallet.scss";
+
+.hobbies-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .cubing-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .title-section {
+      display: flex;
+      flex-direction: row;
+    
+      .cube-picture {
+        height: 25px;
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+    }
+
+    .cubing-body {
+      display: flex;
+      flex-direction: row;
+
+      .cubing-content {
+        width: 60%;
+      }
+
+      .cubing-picture {
+        width: 40%;
+        height: 300px;
+        margin-top: -100px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .mental-games-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .title-section {
+      display: flex;
+      flex-direction: row;
+    
+      .fa-chess-board {
+        color: $dark-blue;
+        margin-top: 27px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .mkt-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .title-section {
+      display: flex;
+      flex-direction: row;
+    
+      .mkt-picture {
+        height: 120px;
+        margin-top: -30px;
+        margin-left: -35px;
+        margin-right: -20px;
+        margin-bottom: -10px;
+      }
+    }
+
+    .mkt-body {
+      display: flex;
+      flex-direction: row;
+
+      .mkt-content {
+        width: 60%;
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            color: $dark-blue;
+          }
+        }
+      }
+
+      .mkt-picture {
+        width: 40%;
+        height: 300px;
+        margin-top: -90px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .clickable {
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "src/styles/color-pallet.scss";
+
+.life-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .fiance-section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    
+    .fiance-picture-container {
+      width: 60%;
+      text-align: center;
+
+      .fiance-picture {
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+    }
+
+    .fiance-content {
+      width: 40%;
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  .cat-section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    .cat-content {
+      width: 40%;
+      text-align: center;
+      align-self: center;
+    }
+    
+    .cat-picture-container {
+      width: 60%;
+      text-align: center;
+
+      .cat-picture {
+        max-width: 45%;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 10%;
+      }
+
+      .sylvester {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@import "src/styles/color-pallet.scss";
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .bio-section {
+    display: flex;
+    flex-direction: row;
+
+    .bio {
+      width: 60%;
+      padding-right: 10px;
+    }
+
+    .stats {
+      width: 40%;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      
+      div {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+
+        .fa-solid {
+          color: $dark-blue;
+          margin-right: 10px;
+        }
+
+        .right-align {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .current-employment-section {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+
+    .current-employers-container {
+      display: flex;
+      flex-direction: row;
+
+      .employer {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .slalom-logo {
+          height: 50px;
+          object-fit: contain;
+          margin-bottom: 10px;
+        }
+
+        .wca-logo {
+          height: 50px;
+          object-fit: contain;
+          margin-bottom: 10px;
+        }
+
+        b {
+          margin-bottom: 10px;
+        }
+
+        div {
+          text-align: center;
+        }
+      }
+
+      .slalom-employer {
+        padding-right: 10px;
+      }
+
+      .wca-employer {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .clickable {
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { subContentAnimations } from 'src/app/animations';
 import { NavItem } from 'src/app/models/navItem';
 
 @Component({
   selector: 'about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
+  animations: [ subContentAnimations ]
 })
 export class AboutComponent implements OnInit {
   navItems: NavItem[] = [

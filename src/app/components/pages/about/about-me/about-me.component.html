@@ -1,1 +1,49 @@
-<p>about-me works!</p>
+<div class="about-me-container">
+  <div class="bio-section">
+    <div class="bio">
+      <b>Hello! I'm Jacob Ambrose.</b>
+      I'm a software engineer from Atlanta, Georgia. I'm a full stack developer, proficent in writing both back-end and front-end code. 
+      I built this website from the ground up including all the UX, Angular Code, Backend Service, and AWS hosting; <span class="clickable" [routerLink]="'/projects/jacob-ambrose-me'">you can read more about the specifications here.</span>
+      Please feel free to browse around!
+    </div>
+    <div class="stats">
+      <div>
+        <i class="fa-solid fa-briefcase"></i>
+        Profession: 
+        <span class="right-align">Software Engineer</span>
+      </div>
+      <div>
+        <i class="fa-solid fa-location-dot"></i>
+        Location:
+        <span class="right-align">Atlanta, GA</span>
+      </div>
+      <div>
+        <i class="fa-solid fa-cake-candles"></i>
+        Age:
+        <span class="right-align">26</span>
+      </div>
+    </div>
+  </div>
+  <div class="current-employment-section">
+    <h2 class="title">Current Employment</h2>
+    <div class="current-employers-container">
+      <div class="employer slalom-employer">
+        <img src="assets/slalom.png" class="slalom-logo clickable" [routerLink]="'/slalom'">
+        <b class="clickable" [routerLink]="'/slalom'">Slalom Consulting</b>
+        <div>
+          I work as a software consultant for Slalom. I've been with the company for over 4 years and worked on a variety of different projects and technology stacks consulting for several different companies.
+          <span class="clickable" [routerLink]="'/slalom'">You can read more about my work here.</span>
+        </div>
+      </div>
+      <div class="employer wca-employer">
+        <img src="assets/wca_logo.svg" class="wca-logo clickable" [routerLink]="'/wca'">
+        <b class="clickable" [routerLink]="'/wca'">World Cube Association</b>
+        <div>
+          WCA is a non-profit organization that governs Speed Cubing Competitions around the world.
+          I am heavily involved in the organization as the Regional Delegate for the Southeast, USA and a Senior Results Team member.
+          <span class="clickable" [routerLink]="'/wca'">You can read more about my work here.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
