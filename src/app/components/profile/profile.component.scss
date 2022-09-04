@@ -28,6 +28,12 @@
       height: 100%;
       width: 100%;
       object-fit: contain;
+
+      opacity: 0;
+      -webkit-transition: all 1s 800ms; 
+      -moz-transition: all 1s 800ms; 
+      -ms-transition: all 1s 800ms; 
+      -o-transition: all 1s 800ms; 
     }
   }
 

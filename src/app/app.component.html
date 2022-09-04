@@ -1,7 +1,7 @@
 <div class="project-container">
-  <main-nav class="main-nav-section"></main-nav>
-  <profile class="profile-section"></profile>
-  <div class="content-section">
-    <router-outlet></router-outlet>
+  <main-nav class="main-nav-section" [@navAnimation]="'open'"></main-nav>
+  <profile class="profile-section" [@profileAnimation]="'open'"></profile>
+  <div class="content-section" [@contentAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']" [@contentAnimations2]="'open'">
+    <router-outlet #o="outlet"></router-outlet>
   </div>
 </div>
