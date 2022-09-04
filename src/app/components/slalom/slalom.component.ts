@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-slalom',
+  selector: 'slalom',
   templateUrl: './slalom.component.html',
   styleUrls: ['./slalom.component.scss']
 })

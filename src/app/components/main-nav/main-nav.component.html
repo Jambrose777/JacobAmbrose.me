@@ -1,5 +1,5 @@
 <div class="main-nav-container">
-  <a class="main-nav-item clickable" [routerLink]="'/about'" [routerLinkActive]="['active']">
+  <a class="main-nav-item clickable" [routerLink]="'/about'" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive }">
     <i class="fa-solid fa-user fa-2xl"></i>
     About
   </a>
@@ -7,12 +7,12 @@
     <i class="fa-solid fa-graduation-cap fa-2xl"></i>
     Education
   </a>
-  <a class="main-nav-item clickable" [routerLink]="'/slalom'" [routerLinkActive]="['slalom-active']">
-    <div class="custom-picture slalom-picture"></div>
+  <a class="main-nav-item slalom-picture clickable" [routerLink]="'/slalom'" [routerLinkActive]="['slalom-active']">
+    <div class="custom-picture"></div>
     Slalom
   </a>
-  <a class="main-nav-item clickable" [routerLink]="'/wca'" [routerLinkActive]="['wca-active']">
-    <div class="custom-picture wca-picture"></div>
+  <a class="main-nav-item wca-picture clickable" [routerLink]="'/wca'" [routerLinkActive]="['wca-active']">
+    <div class="custom-picture"></div>
     WCA
   </a>
   <a class="main-nav-item clickable" [routerLink]="'/projects'" [routerLinkActive]="['active']">
@@ -27,4 +27,5 @@
     <i class="fa-solid fa-envelope fa-2xl"></i>
     Contact Me
   </a>
+  <a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive #rootActive="routerLinkActive" style="display: none"></a>
 </div>

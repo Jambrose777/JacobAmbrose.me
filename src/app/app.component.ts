@@ -3,7 +3,7 @@ import { ChildrenOutletContexts } from '@angular/router';
 import { contentAnimations, contentAnimations2, navAnimation, profileAnimation } from './animations';
 
 @Component({
-  selector: 'app-root',
+  selector: 'root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [ contentAnimations, contentAnimations2, navAnimation, profileAnimation ]

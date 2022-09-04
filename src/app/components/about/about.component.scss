@@ -8,4 +8,21 @@
   border-radius: 0 5px 5px 0;
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+
+  .header-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+
+    .page-title {
+      font-size: 20px;
+    }
+
+    .sub-nav {
+      margin-left: auto;
+    }
+  }
 }

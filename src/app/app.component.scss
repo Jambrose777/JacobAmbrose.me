@@ -28,6 +28,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     overflow-y: hidden;
+    z-index: 2; // this is to ensure box-shadow on profile section is shown over the content section
   }
 
   .content-section {
@@ -35,7 +36,8 @@
     width: calc((100% - 110px) * .5);
     margin-top: 20px;
     margin-bottom: 20px;
-    z-index: -1; // this is to ensure box-shadow on profile section is shown over the content section
+    z-index: 1; // this is to ensure box-shadow on profile section is shown over the content section
+    position: relative;
     overflow-x: hidden;
   }
 }

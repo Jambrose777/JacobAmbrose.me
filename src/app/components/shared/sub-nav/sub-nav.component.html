@@ -1,0 +1,8 @@
+<div class="sub-nav-container">
+  <ng-container *ngFor="let navItem of navItems; first as isFirst">
+    <div class="nav-item clickable" [routerLink]="navItem.route" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive && isFirst }">
+      {{navItem.title}}
+    </div>
+  </ng-container>
+  <a routerLink="/{{baseRoute}}" [routerLinkActiveOptions]="{exact: true}" routerLinkActive #rootActive="routerLinkActive" style="display: none"></a>
+</div>

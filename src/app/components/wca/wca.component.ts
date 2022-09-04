@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-wca',
+  selector: 'wca',
   templateUrl: './wca.component.html',
   styleUrls: ['./wca.component.scss']
 })

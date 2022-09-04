@@ -47,22 +47,30 @@
       object-fit: contain;
 
     }
+  }
 
-    .slalom-picture {
+  .slalom-picture {
+    div {
       background: url("../../../assets/slalom-black.png") no-repeat;
       background-size: contain;
+    }
 
-      &:hover {
+    &:hover {
+      div {
         background: url("../../../assets/slalom.png") no-repeat;
         background-size: contain;
       }
     }
+  }
 
-    .wca-picture {
+  .wca-picture {
+    div {
       background: url("../../../assets/wca_logo_black.svg") no-repeat;
       background-size: contain;
+    }
 
-      &:hover {
+    &:hover {
+      div {
         background: url("../../../assets/wca_logo_blue.svg") no-repeat;
         background-size: contain;
       }
@@ -70,14 +78,14 @@
   }
 
   .slalom-active {
-    .slalom-picture {
+    div {
       background: url("../../../assets/slalom.png") no-repeat;
       background-size: contain;
     }
   }
 
   .wca-active {
-    .wca-picture {
+    div {
       background: url("../../../assets/wca_logo_blue.svg") no-repeat;
       background-size: contain;
     }
