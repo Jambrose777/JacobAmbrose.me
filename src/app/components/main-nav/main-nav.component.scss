@@ -1,6 +1,85 @@
 @import "src/styles/color-pallet.scss";
 
 .main-nav-container {
-  height: 60vh;
   width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .clickable {
+    cursor: pointer;
+    color: $black;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+
+  .active {
+    color: $dark-blue;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .main-nav-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .fa-2xl {
+      margin-top: 20px;
+      margin-bottom: -20px;
+      height: 40px;
+    }
+
+    .custom-picture {
+      height: 40px;
+      width: 40px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      object-fit: contain;
+
+    }
+
+    .slalom-picture {
+      background: url("../../../assets/slalom-black.png") no-repeat;
+      background-size: contain;
+
+      &:hover {
+        background: url("../../../assets/slalom.png") no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .wca-picture {
+      background: url("../../../assets/wca_logo_black.svg") no-repeat;
+      background-size: contain;
+
+      &:hover {
+        background: url("../../../assets/wca_logo_blue.svg") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .slalom-active {
+    .slalom-picture {
+      background: url("../../../assets/slalom.png") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .wca-active {
+    .wca-picture {
+      background: url("../../../assets/wca_logo_blue.svg") no-repeat;
+      background-size: contain;
+    }
+  }
 }

@@ -1,1 +1,30 @@
-<div class="main-nav-container"></div>
+<div class="main-nav-container">
+  <a class="main-nav-item clickable" [routerLink]="'/about'" [routerLinkActive]="['active']">
+    <i class="fa-solid fa-user fa-2xl"></i>
+    About
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/education'" [routerLinkActive]="['active']">
+    <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+    Education
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/slalom'" [routerLinkActive]="['slalom-active']">
+    <div class="custom-picture slalom-picture"></div>
+    Slalom
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/wca'" [routerLinkActive]="['wca-active']">
+    <div class="custom-picture wca-picture"></div>
+    WCA
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/projects'" [routerLinkActive]="['active']">
+    <i class="fa-solid fa-code-pull-request fa-2xl"></i>
+    Projects
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/skills'" [routerLinkActive]="['active']">
+    <i class="fa-solid fa-chart-simple fa-2xl"></i>
+    Skills
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/contact-me'" [routerLinkActive]="['active']">
+    <i class="fa-solid fa-envelope fa-2xl"></i>
+    Contact Me
+  </a>
+</div>

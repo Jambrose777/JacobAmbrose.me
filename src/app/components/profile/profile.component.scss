@@ -51,10 +51,10 @@
   .clickable {
     cursor: pointer;
     color: $black;
-  }
 
-  .clickable:active {
-    color: $dark-blue;
+    &:hover {
+      color: $dark-blue;
+    }
   }
 
   .profile-resume-link {
@@ -69,6 +69,18 @@
     a {
       text-decoration: none;
       color: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &:hover {
+        color: $dark-blue;
+      }
+
+      .fa-solid {
+        margin-right: 10px;
+        margin-top: 10px;
+      }
     }
   }
 
