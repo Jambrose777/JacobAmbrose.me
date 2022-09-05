@@ -1,8 +1,28 @@
 <div class="sub-nav-container">
-  <ng-container *ngFor="let navItem of navItems; first as isFirst">
-    <div class="nav-item clickable" [routerLink]="navItem.route" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive && isFirst }">
-      {{navItem.title}}
-    </div>
+  <ng-container *ngIf="!collapsed">
+    <ng-container *ngFor="let navItem of navItems; first as isFirst">
+      <div class="nav-item clickable" [routerLink]="navItem.route" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive && isFirst }">
+        {{navItem.title}}
+      </div>
+    </ng-container>
   </ng-container>
+  <ng-container *ngIf="collapsed">
+    <div class="selected-route active">{{activeRouteTitle}}</div>
+    <div class="nav-menu" mat-button [matMenuTriggerFor]="menu">
+      <i class="fa-solid fa-bars fa-xl"></i>
+    </div>
+
+    <mat-menu #menu="matMenu">
+      <ng-container *ngFor="let navItem of navItems; first as isFirst">
+        <button mat-menu-item>
+          <div [routerLink]="navItem.route" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive && isFirst }">
+            <span *ngIf="navItem.title === activeRouteTitle">&nbsp;</span>
+            {{navItem.title}}
+          </div>
+        </button>
+      </ng-container>
+    </mat-menu>
+  </ng-container>
+
   <a routerLink="/{{baseRoute}}" [routerLinkActiveOptions]="{exact: true}" routerLinkActive #rootActive="routerLinkActive" style="display: none"></a>
 </div>

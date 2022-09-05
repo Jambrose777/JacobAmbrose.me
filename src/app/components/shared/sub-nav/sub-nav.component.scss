@@ -21,4 +21,20 @@
   .active {
     color: $dark-blue;
   }
+
+  .selected-route {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .nav-menu {
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+}
+
+::ng-deep .active {
+  color: $dark-blue;
 }

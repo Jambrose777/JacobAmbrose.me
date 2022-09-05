@@ -19,15 +19,14 @@ export class WcaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.navItems[2].title = window.innerWidth > 1240 ? 'Results Team' : 'WRT';
+    this.navItems[2].title = window.innerWidth > 1240 || window.innerWidth <= 1075 ? 'Results Team' : 'WRT';
     this.collapsedNav = window.innerWidth <= 1075;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.navItems[2].title = window.innerWidth > 1240 ? 'Results Team' : 'WRT';
+    this.navItems[2].title = window.innerWidth > 1240 || window.innerWidth <= 1075 ? 'Results Team' : 'WRT';
     this.collapsedNav = window.innerWidth <= 1075;
   }
-
 
 }
