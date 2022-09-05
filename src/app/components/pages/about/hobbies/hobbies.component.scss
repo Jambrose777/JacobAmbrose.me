@@ -39,6 +39,7 @@
         height: 300px;
         margin-top: -100px;
         object-fit: contain;
+        margin-bottom: -35px;
       }
     }
   }
@@ -109,6 +110,36 @@
 
     &:hover {
       color: $dark-blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .cubing-body {
+    flex-direction: column !important;
+
+    .cubing-content {
+      width: 100% !important;
+    }
+
+    .cubing-picture {
+      width: 100% !important;
+      margin-top: -50px !important;
+      margin-bottom: -20px !important;
+    }
+  }
+
+  .mkt-body {
+    flex-direction: column !important;
+
+    .mkt-content {
+      width: 100% !important;
+    }
+
+    .mkt-picture {
+      width: 100% !important;
+      height: 200px !important;
+      margin-top: 0 !important;
     }
   }
 }
