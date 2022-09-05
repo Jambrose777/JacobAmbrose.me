@@ -76,6 +76,8 @@
   }
 
   .slalom-active {
+    color: $dark-blue;
+
     div {
       background: url("../../../assets/slalom.png") no-repeat;
       background-size: contain;
@@ -83,6 +85,8 @@
   }
 
   .wca-active {
+    color: $dark-blue;
+    
     div {
       background: url("../../../assets/wca_logo_blue.svg") no-repeat;
       background-size: contain;

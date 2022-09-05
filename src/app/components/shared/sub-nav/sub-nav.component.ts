@@ -9,6 +9,7 @@ import { NavItem } from 'src/app/models/navItem';
 export class SubNavComponent implements OnInit {
   @Input() navItems: NavItem[] = [];
   @Input() baseRoute: string;
+  @Input() collapsed: boolean = false;
 
   constructor() { }
 

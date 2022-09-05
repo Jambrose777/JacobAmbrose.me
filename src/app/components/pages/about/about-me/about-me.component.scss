@@ -26,6 +26,7 @@
         margin: 10px 0;
         text-decoration: none;
         color: inherit;
+        align-items: center;
 
         .fa-solid {
           color: $dark-blue;
@@ -34,6 +35,15 @@
 
         .right-align {
           margin-left: auto;
+          padding-left: 10px;
+          overflow-wrap: break-word;
+          align-items: flex-end;
+          text-align: end;
+
+          .email-wrap {
+            white-space: nowrap;
+            display: inline-block;
+          }
         }
       }
     }
@@ -95,6 +105,30 @@
 
     &:hover {
       color: $dark-blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .bio-section {
+    flex-direction: column !important;
+
+    .bio {
+      width: 100% !important;
+      padding-right: 0 !important;
+      margin-bottom: 40px;
+    }
+    .stats {
+      width: 100% !important;
+    }
+  }
+
+  .current-employers-container {
+    flex-direction: column !important;
+
+    .employer {
+      width: 100% !important;
+      margin-bottom: 40px;
     }
   }
 }

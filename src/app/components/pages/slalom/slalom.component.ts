@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavItem } from 'src/app/models/navItem';
 
 @Component({
@@ -18,6 +18,12 @@ export class SlalomComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.navItems[3].title = window.innerWidth > 1080 ? 'Cox Auto' : 'Cox';
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.navItems[3].title = window.innerWidth > 1080 ? 'Cox Auto' : 'Cox';
   }
 
 }

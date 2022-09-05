@@ -9,6 +9,7 @@
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 
@@ -24,5 +25,11 @@
     .sub-nav {
       margin-left: auto;
     }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-container {
+    flex-direction: column !important;
   }
 }
