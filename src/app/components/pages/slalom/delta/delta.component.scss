@@ -1,0 +1,109 @@
+@import "src/styles/color-pallet.scss";
+
+.delta-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+
+    .title-details {
+      margin-top: 15px;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    .fa-solid {
+      color: $dark-blue;
+    }
+  }
+
+  .right-align {
+    margin-left: auto;
+    padding-left: 10px;
+    align-items: flex-end;
+    text-align: end;
+  }
+
+  .content {
+    .content-text {
+      margin-bottom: 40px;
+    }
+
+    .picture-container {
+      margin-bottom: 40px;
+
+      .delta-picture {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+      }
+
+      .image-text {
+        text-align: center;
+        font-style: italic;
+        color: $black;
+      }
+    }
+
+    .stat-section {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+
+      .stat-section-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+    }
+
+    .stat {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .fa-solid {
+        padding-right: 5px;
+        color: $dark-blue;
+      }
+    }
+    
+    .badge-container {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+
+      .badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: $dark-blue;
+        color: white;
+        margin: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// special media query as badges overlap :/
+@media only screen and (max-width: 1362px) {
+  .stat-section {
+    flex-direction: column !important;
+
+    .stat-section-container {
+      width: 100% !important;
+    }
+  }
+}

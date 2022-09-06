@@ -16,11 +16,13 @@ export class SlalomComponent implements OnInit, AfterViewInit {
     { title: 'Cox Auto', route: 'cox' },
     { title: 'Pulte', route: 'pulte' },
   ];
+  collapsedNav: boolean = false;
 
   constructor(private changeRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.navItems[3].title = window.innerWidth > 1080 ? 'Cox Auto' : 'Cox';
+    this.collapsedNav = window.innerWidth < 400;
   }
 
   ngAfterViewInit(): void {
@@ -30,6 +32,7 @@ export class SlalomComponent implements OnInit, AfterViewInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.navItems[3].title = window.innerWidth > 1080 ? 'Cox Auto' : 'Cox';
+    this.collapsedNav = window.innerWidth < 400;
   }
 
   isMobile(): boolean {

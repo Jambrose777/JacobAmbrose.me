@@ -1,1 +1,136 @@
-<p>delta works!</p>
+<div class="delta-container">
+  <div class="header">
+    <h2 class="title">Delta - Itegrated Crew Hub (ICH)</h2>
+    <div class="title-details right-align">
+      <div class="date">
+        July 2019 - March 2020
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-text">
+      At Delta, I worked in the Emerging Technologies (EMT) program, primarily on the ICH Project. 
+      ICH is an internal tool for Delta used by crew schedulers. It is used to help visualize crew member' schedules and identify problems. The system can find available resources to replace crew (ie if a pilot is delayed and cannot pilot a connecting flight). The tool can generate different scenarios (ie deicing taking a longer amount of time) to find potential risks for the crew.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/resources_graph.png">
+      <div class="image-text">Resources Graph</div>
+    </div>
+    <div class="content-text">
+      The main components of the project was a variety of dashboards displaying different metrics on pilots and flight attendants statuses. 
+      Many of these visualizations were made using D3 (Data-Driven Documents) and were interactive to drill into specific sections at a simple click. 
+      These visuals are shown in the pictures, such as the multi bar graph, gantt charts, pie charts, and heat maps.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/what_if_gantt.png">
+      <div class="image-text">What If - Gantt Chart</div>
+    </div>
+    <div class="content-text">
+      The unique aspect about the D3 visualizations is that the code was written in such a way that they are reusable and you can specify which components you would want to display. 
+      For example, the blue vertical line in a graph indicates the current time and shades everything in the past; this could be toggled on/off and even customized based on different options provided to the component.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/ct_queue.png">
+      <div class="image-text">Crew Tracking Queue Dashboard</div>
+    </div>
+    <div class="content-text">
+      The Frontend of this application was made using Angular. We used Angular's reactive forums to build a filtering system that saved a user's preferences and provided a link to share the preferences with other co-workers.
+      This application was part of the EMT program, which originally used a mono-repository for all sub-projects. We improved the structure by breaking out each sub-project into it's own repository and having the main code-base load in different sub-projects whenever needed.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/forum_modal.png">
+      <div class="image-text">Filter Forum Modal</div>
+    </div>
+    <div class="content-text">
+      The Backend for the project was 2 Java Springboot applications. 
+      The first was a BFF (Backend to Frontend) Application that provided extra security and results caching. 
+      The second was a normal backend server that recieved request and interacted with a Teradata database to retrive information for the user.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/what_if_metrics.png">
+      <div class="image-text">What If - Metrics</div>
+    </div>
+    <div class="content-text">
+      During my time at Delta, I transitioned into the Team Leader role. 
+      I helped manage deployments of our application to the developer, testing, staging, and production enviroments.
+      I taught new team members the code base, domain knowledge, best practices, and provided general support for their work.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/resources_table.png">
+      <div class="image-text">Resources Table</div>
+    </div>
+    <div class="content-text">
+      I encouraged many program-wide improvements.
+      I helped ensure greater code quality and general structural advancements.
+      I implemented unit testing in ICH and setup frameworks for other projects to increase testing coverage.
+      I set up optimized processes for having units of work be completed more efficently and with higher quality.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/baggage_status.png">
+      <div class="image-text">Baggage Status</div>
+    </div>
+    <div class="content-text">
+      Sadly, the pandemic caused a hardship for Delta. As such development for all EMT projects terminated. 
+      I stayed an extra week to develop the System Forcast, which was a system designed to tackle issues of mass-cancellation of flights due to COVID (everything in the below screenshot was made by myself in the final week of working at delta).
+      I was the top contributor in the program; I had over 1000 git commits merged (or specific units of work / issue tickets) into the projects, which is over 600 commits above the second top contributor.
+    </div>
+    <div class="picture-container">
+      <img class="delta-picture" src="assets/delta/system_forcast.png">
+      <div class="image-text">System Forcast</div>
+    </div>
+    <div class="content-text">
+      <h2 class="title">
+        <i class="fa-solid fa-microchip"></i>
+        Technologies Used
+      </h2>
+      <div class="stat-section">
+        <div class="stat-section-container">
+          <div class="stat">
+            <i class="fa-solid fa-cube"></i>
+            Frameworks: 
+            <div class="badge-container">
+              <div class="badge">Angular</div>
+              <div class="badge">Springboot</div>
+            </div>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-file"></i>
+            Documentation: 
+            <div class="badge-container">
+              <div class="badge">Swagger</div>
+            </div>
+          </div>
+        </div>
+        <div class="stat-section-container">
+          <div class="stat">
+            <i class="fa-solid fa-database"></i>
+            Database: 
+            <div class="badge-container">
+              <div class="badge">Teradata</div>
+            </div>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-gear"></i>
+            Dev Ops: 
+            <div class="badge-container">
+              <div class="badge">GitLab</div>
+              <div class="badge">OpenShift</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <i class="fa-solid fa-globe"></i>
+        Languages: 
+        <div class="badge-container">
+          <div class="badge">Typescript</div>
+          <div class="badge">Javascript</div>
+          <div class="badge">Java</div>
+          <div class="badge">D3</div>
+          <div class="badge">HTML</div>
+          <div class="badge">SCSS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

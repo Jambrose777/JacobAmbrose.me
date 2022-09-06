@@ -4,7 +4,7 @@
       <img src="assets/slalom.png" class="slalom-logo">
       <h2 class="page-title">Slalom</h2>
     </a>
-    <sub-nav class="sub-nav" [navItems]="navItems" [baseRoute]="'slalom'"></sub-nav>
+    <sub-nav class="sub-nav" [navItems]="navItems" [baseRoute]="'slalom'" [collapsed]="collapsedNav"></sub-nav>
   </div>
   <div *ngIf="!isMobile()" class="content-section" [@subContentAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']" >
     <router-outlet #o="outlet"></router-outlet>
