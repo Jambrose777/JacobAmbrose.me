@@ -3,10 +3,6 @@
     <i class="fa-solid fa-user fa-2xl"></i>
     About
   </a>
-  <a class="main-nav-item clickable" [routerLink]="'/education'" [routerLinkActive]="['active']">
-    <i class="fa-solid fa-graduation-cap fa-2xl"></i>
-    Education
-  </a>
   <a class="main-nav-item slalom-picture clickable" [routerLink]="'/slalom'" [routerLinkActive]="['slalom-active']">
     <div class="custom-picture"></div>
     Slalom
@@ -18,6 +14,10 @@
   <a class="main-nav-item clickable" [routerLink]="'/projects'" [routerLinkActive]="['active']">
     <i class="fa-solid fa-code-pull-request fa-2xl"></i>
     Projects
+  </a>
+  <a class="main-nav-item clickable" [routerLink]="'/education'" [routerLinkActive]="['active']">
+    <i class="fa-solid fa-graduation-cap fa-2xl"></i>
+    Education
   </a>
   <a class="main-nav-item clickable" [routerLink]="'/skills'" [routerLinkActive]="['active']">
     <i class="fa-solid fa-chart-simple fa-2xl"></i>
@@ -44,12 +44,6 @@
       </div>
     </button>
     <button mat-menu-item>
-      <div [routerLink]="'/education'" [routerLinkActive]="['active']">
-        <i class="fa-solid fa-graduation-cap fa-lg fa-nav-item"></i>
-        Education
-      </div>
-    </button>
-    <button mat-menu-item>
       <div [routerLink]="'/slalom'" [routerLinkActive]="['slalom-nav-item-active']" class="slalom-picture-nav-item">
         <div class="custom-picture-nav-item"></div>
         Slalom
@@ -65,6 +59,12 @@
       <div [routerLink]="'/projects'" [routerLinkActive]="['active']">
         <i class="fa-solid fa-code-pull-request fa-lg fa-nav-item"></i>
         Projects
+      </div>
+    </button>
+    <button mat-menu-item>
+      <div [routerLink]="'/education'" [routerLinkActive]="['active']">
+        <i class="fa-solid fa-graduation-cap fa-lg fa-nav-item"></i>
+        Education
       </div>
     </button>
     <button mat-menu-item>

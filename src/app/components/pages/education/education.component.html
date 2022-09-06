@@ -1,5 +1,81 @@
 <div class="education-container">
   <div class="header-container">
-    <h2 class="page-title">Education</h2>
+    <h2 class="page-title">
+      <i class="fa-solid fa-graduation-cap fa-lg"></i>
+      Education
+    </h2>
+  </div>
+  <div class="content-section">
+    <div class="university-section">
+      <div class="university">
+        <img src="assets/uga_logo.png" class="uga-logo">
+        <div></div>
+      </div>
+      <div class="stats">
+        <div>
+          <i class="fa-solid fa-building-columns"></i>
+          Degree: 
+          <span class="right-align">B.S. Computer Science</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-building-columns"></i>
+          Minor: 
+          <span class="right-align">Applied Mathematics</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          Location: 
+          <span class="right-align">Athens, Georgia</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-calendar"></i>
+          Graduated:
+          <span class="right-align">May 2018</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-chart-simple"></i>
+          GPA:
+          <span class="right-align">3.38/4.00</span>
+        </div>
+      </div>
+    </div>
+    <div class="involvement-section">
+      <div class="involvement-sub-section pla-section">
+        <h2 class="title">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          Peer Learning Assistant (PLA)
+        </h2>
+        <div>
+          I worked as a PLA in the computer science department. A PLA is a teaching assistant that works more hands on in a modified classroom. 
+          I assisted over 200 students in a variety of courses, primarily helping students learn fundamentals, their projects, and different learning techniques.
+          I completed a Pedagogy over 5 months that is focused on diagnosing how people learn and engaging students in active learning. 
+          I constructed custom scripts to assist other PLAs with auto grading. 
+        </div>
+      </div>
+      <div class="involvement-sub-section campus-section">
+        <h2 class="title">
+          <i class="fa-solid fa-music"></i>
+          Campus Involvement
+        </h2>
+        <div>Trumpet Player in the Redcoat Marching Band</div>
+        <div>Trumpet Player in the UGA Basketball Band</div>
+        <div>Founder and President of the Rubik's Cube Club at UGA</div>
+        <div>Phi Mu alpha Sinfonian</div>
+        <div>Desk Assistant at University Housing</div>
+      </div>
+    </div>
+    <div class="coursework-section">
+      <h2 class="title">
+        <i class="fa-solid fa-chalkboard"></i>
+        Relevant Coursework
+      </h2>
+      <div class="courses">
+        <ng-container *ngFor="let course of courses;">
+          <div class="course">
+            {{course}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
   </div>
 </div>

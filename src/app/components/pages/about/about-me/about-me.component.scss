@@ -69,6 +69,10 @@
         flex-direction: column;
         align-items: center;
 
+        .black-text {
+          color: black;
+        }
+
         .slalom-logo {
           height: 50px;
           object-fit: contain;
@@ -102,6 +106,7 @@
 
   .clickable {
     cursor: pointer;
+    color: $purple;
 
     &:hover {
       color: $dark-blue;
