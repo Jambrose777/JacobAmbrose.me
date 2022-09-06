@@ -1,6 +1,12 @@
 import { animate, animateChild, AUTO_STYLE, group, query, sequence, state, style, transition, trigger } from "@angular/animations";
 
 export const contentAnimations = trigger('contentAnimations', [
+  transition('void => *', [
+    style({ transform: 'translateX(-50%)', opacity: 0 }),
+    animate('500ms 1200ms', 
+      style({ transform: 'translateX(0%)', opacity: 100 })
+    )
+  ]),
   transition('* <=> *', [
     query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }), 
     group([
@@ -20,22 +26,43 @@ export const contentAnimations = trigger('contentAnimations', [
   ])
 ]);
 
-export const contentAnimations2 = trigger('contentAnimations2', [
-  transition('* => open', [
-    style({ transform: 'translateX(-50%)', opacity: 0 }),
-    animate('500ms 1200ms', 
-      style({ transform: 'translateX(0%)', opacity: 100 })
-    )
+export const contentAnimationsOpenMobile = trigger('contentAnimationsOpenMobile', [
+  state('void', style({
+    height: '0',
+    'overflow-y': 'hidden',
+  })),
+  state('*', style({
+    height: 'calc(100vh - 115px)',
+    opacity: 1,
+  })),
+  transition('void => *', [
+    animate('500ms 300ms')
   ]),
 ]);
 
 export const navAnimation = trigger('navAnimation', [
+  state('*', style({
+    height: '0',
+  })),
   state('open', style({
     height: '580px',
     opacity: 1,
   })),
   transition('* => open', [
     animate('500ms')
+  ]),
+]);
+
+export const navAnimationMobile = trigger('navAnimationMobile', [
+  state('*', style({
+    height: '0',
+  })),
+  state('open', style({
+    height: '100px',
+    opacity: 1,
+  })),
+  transition('* => open', [
+    animate('300ms')
   ]),
 ]);
 
@@ -50,28 +77,6 @@ export const profileAnimation = trigger('profileAnimation', [
 ]);
 
 export const subContentAnimations = trigger('subContentAnimations', [
-
-// scroll in / out
-  // transition("* => *", [
-  //   query(":enter, :leave", style({ position: "fixed", width: 'calc((100vw - 190px) * .5)', height: 'calc(100vh - 218px)', 'overflow-y': 'hidden' }), { optional: true }),
-  //   query(":enter", style({ visibility: 'hidden' }), { optional: true }),
-  //   sequence([
-  //     query(":leave", [
-  //       style({ height: 'calc(100vh - 218px)', visibility: 'visible' }),
-  //       animate('500ms', 
-  //         style({ height: '0', visibility: 'hidden' })
-  //       )
-  //     ], { optional: true }),,
-  //     query(":enter", [
-  //       style({ height: '0', visibility: 'hidden' }),
-  //       animate('500ms', 
-  //         style({ height: 'calc(100vh - 218px)', visibility: 'visible' })
-  //       )
-  //     ], { optional: true }),,
-  //   ])
-  // ])
-
-// Fade in / out
   transition("* => *", [
     query(":enter, :leave", style({ position: "fixed", width: 'calc((100vw - 190px) * .5)', height: 'calc(100vh - 218px)', 'overflow-y': 'hidden' }), { optional: true }),
     query(":enter", style({ visibility: 'hidden' }), { optional: true }),

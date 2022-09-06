@@ -1,5 +1,5 @@
 <div class="main-nav-container">
-  <a class="main-nav-item clickable" [routerLink]="'/about'" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive }">
+  <a class="main-nav-item clickable" [routerLink]="'/about'" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive && !isMobile() }">
     <i class="fa-solid fa-user fa-2xl"></i>
     About
   </a>
@@ -23,9 +23,56 @@
     <i class="fa-solid fa-chart-simple fa-2xl"></i>
     Skills
   </a>
-  <a class="main-nav-item clickable" [routerLink]="'/contact-me'" [routerLinkActive]="['active']">
+  <a class="main-nav-item clickable mobile-nav-item" [routerLink]="'/contact-me'" [routerLinkActive]="['active']">
     <i class="fa-solid fa-envelope fa-2xl"></i>
     Contact Me
   </a>
+  <a class="main-nav-item clickable mobile-nav-item mobile-only-nav-item" [routerLink]="'/home'" [routerLinkActive]="['active']" [ngClass]="{'active': rootActive.isActive && isMobile() }">
+    <i class="fa-solid fa-home fa-2xl"></i>
+    Home
+  </a>
+  <a class="main-nav-item clickable mobile-nav-item mobile-only-nav-item" mat-button [matMenuTriggerFor]="menu">
+    <i class="fa-solid fa-bars fa-2xl"></i>
+    Menu
+  </a>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <div [routerLink]="'/about'" [routerLinkActive]="['active']">
+        <i class="fa-solid fa-user fa-lg fa-nav-item"></i>
+        About
+      </div>
+    </button>
+    <button mat-menu-item>
+      <div [routerLink]="'/education'" [routerLinkActive]="['active']">
+        <i class="fa-solid fa-graduation-cap fa-lg fa-nav-item"></i>
+        Education
+      </div>
+    </button>
+    <button mat-menu-item>
+      <div [routerLink]="'/slalom'" [routerLinkActive]="['slalom-nav-item-active']" class="slalom-picture-nav-item">
+        <div class="custom-picture-nav-item"></div>
+        Slalom
+      </div>
+    </button>
+    <button mat-menu-item>
+      <div [routerLink]="'/wca'" [routerLinkActive]="['wca-nav-item-active']" class="wca-picture-nav-item">
+        <div class="custom-picture-nav-item"></div>
+        WCA
+      </div>
+    </button>
+    <button mat-menu-item>
+      <div [routerLink]="'/projects'" [routerLinkActive]="['active']">
+        <i class="fa-solid fa-code-pull-request fa-lg fa-nav-item"></i>
+        Projects
+      </div>
+    </button>
+    <button mat-menu-item>
+      <div [routerLink]="'/skills'" [routerLinkActive]="['active']">
+        <i class="fa-solid fa-chart-simple fa-lg fa-nav-item"></i>
+        Skills
+      </div>
+    </button>
+  </mat-menu>
   <a routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive #rootActive="routerLinkActive" style="display: none"></a>
 </div>

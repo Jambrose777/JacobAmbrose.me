@@ -8,7 +8,7 @@
   width: calc(100vw - 80px);
 
   .main-nav-section {
-    height: 0;
+    height: 580px;
     width: 100px;
     margin-right: 10px;
     background-color: $grey;
@@ -17,6 +17,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     overflow-y: hidden;
+    z-index: 2; // this is to ensure box-shadow on profile section is shown over the content section
   }
   
   .profile-section {
@@ -37,5 +38,36 @@
     margin: 20px 0;
     z-index: 1; // this is to ensure box-shadow on profile section is shown over the content section
     position: relative;
+  }
+}
+
+
+@media only screen and (max-width: 950px) {
+  .project-container {
+    flex-direction: column !important;
+    margin: 0 0 10px 0 !important;
+    height: calc(100vh - 5px) !important;
+    width: 100vw !important;
+
+    .main-nav-section {
+      height: 100px;
+      width: 100vw !important; 
+      margin-right: 0 !important;
+    }
+
+    .profile-section {
+      display: none !important;
+    }
+
+    .content-section {
+      height: calc(100vh - 115px);
+      width: calc(100vw - 20px) !important;
+      margin: 0 10px 5px 10px !important;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      background-color: $grey;
+      box-shadow: 3px 3px 5px rgb(0 0 0 / 0.4);
+    }
   }
 }

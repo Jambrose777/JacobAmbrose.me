@@ -6,5 +6,10 @@
     </a>
     <sub-nav class="sub-nav" [navItems]="navItems" [baseRoute]="'slalom'"></sub-nav>
   </div>
-  <router-outlet></router-outlet>
+  <div *ngIf="!isMobile()" class="content-section" [@subContentAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']" >
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+  <div *ngIf="isMobile()" class="content-section" >
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
 </div>

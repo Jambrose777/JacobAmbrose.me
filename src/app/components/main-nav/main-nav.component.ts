@@ -12,4 +12,8 @@ export class MainNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isMobile(): boolean {
+    return window.innerWidth <= 950;
+  }
+
 }

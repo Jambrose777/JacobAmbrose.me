@@ -35,7 +35,7 @@ import { WcaStatisticsComponent } from './components/pages/projects/wca-statisti
 import { SheetsComponent } from './components/pages/projects/sheets/sheets.component';
 
 const moduleRoutes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'about' },
+  { path: '', pathMatch: 'full', redirectTo: window.innerWidth > 950 ? 'about' : 'home' },
   { path: 'about', component: AboutComponent, data: {animation: 'about'}, children: [
     { path: '', pathMatch: 'full', component: AboutMeComponent, data: {animation: 'me'} },
     { path: 'hobbies', component: HobbiesComponent, data: {animation: 'hobbies'} },
@@ -44,6 +44,7 @@ const moduleRoutes: Routes = [
   ] },
   { path: 'contact-me', component: ContactMeComponent, data: {animation: 'contact-me'}  },
   { path: 'education', component: EducationComponent, data: {animation: 'education'}  },
+  window.innerWidth > 950 ? { path: 'home', pathMatch: 'full', redirectTo: 'about' } : { path: 'home', component: ProfileComponent },
   { path: 'projects', component: ProjectsComponent, data: {animation: 'projects'}, children: [
     { path: '', pathMatch: 'full', component: JacobAmbroseMeComponent },
     { path: 'jacob-ambrose-me', component: JacobAmbroseMeComponent },
