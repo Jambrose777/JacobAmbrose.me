@@ -1,0 +1,46 @@
+@import "src/styles/color-pallet.scss";
+
+.sub-slalom-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .title-details {
+      margin-top: 15px;
+    }
+  }
+
+  .right-align {
+    margin-left: auto;
+    padding-left: 10px;
+    align-items: flex-end;
+    text-align: end;
+  }
+
+  .content {
+    div {
+      margin-bottom: 20px;
+    }
+
+    .slalom-office-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    .image-text {
+      text-align: center;
+      font-style: italic;
+      color: $black;
+    }
+  }
+}

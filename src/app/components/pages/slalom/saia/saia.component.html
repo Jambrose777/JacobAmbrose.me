@@ -1,1 +1,138 @@
-<p>saia works!</p>
+<div class="saia-container">
+  <div class="header">
+    <h2 class="title">Saia - Website Redesign</h2>
+    <div class="title-details right-align">
+      <div class="date">
+        July 2018 - July 2019
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-text">
+      On this project, I revamped <a class="clickable" href="http://Saia.com" target="_blank">Saia.com</a> and its contributing systems.
+      We were tasked to replace, the old website to make a modern look and feel as well as improve their severe preformance issues when making trasnactions with their backend.
+      This required learning about Visual Basic (VB) code to learn how their current systems worked.
+    </div>
+
+    <h2 class="title">Frontend</h2>
+    <div class="section">
+      <div class="section-content">
+        <div>
+          The new website uses an Angular frontend. 
+          We developed the site as a reactive web app, so that users can use any device to receive content on the website.
+          Saia has several pages for forums (ie <a class="clickable" href="http://Saia.com/quotes/ltl" target="_blank">Obtaining Quotes</a>) that we revamped to have an improved user experience.
+          We implemented Google Analytics to visually provide the buisness with several dashboard to show site productivity.
+        </div>
+        <div>
+          Saia has <a class="clickable" href="https://www.saia.com/about-us/corporate-responsibility" target="_blank">several pages for general content.</a>
+          Previously, buisness stakeholders would have to learn html and provide developers with what they want for each page, including when they wanted changes to the website.
+          We utilized a headless content management system (CMS) to create an easy way for buisness to edit and manage their content on the website. They no longer have to learn coding nor rely on coding deployments, they can instead log onto the CMS, find the content they want to edit, and edit it with a markdown editor.
+        </div>
+      </div>
+      <div class="section-stats">
+        <div class="stat">
+          <i class="fa-solid fa-cube"></i>
+          Framework: 
+          <div class="badge-container">
+            <div class="badge">Angular</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-globe"></i>
+          Languages: 
+          <div class="badge-container">
+            <div class="badge">Typescript</div>
+            <div class="badge">Javascript</div>
+            <div class="badge">HTML</div>
+            <div class="badge">SCSS</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-database"></i>
+          CMS: 
+          <div class="badge-container">
+            <div class="badge">Contentful</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-database"></i>
+          Storage: 
+          <div class="badge-container">
+            <div class="badge">Reddis</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-chart-line"></i>
+          Reporting: 
+          <div class="badge-container">
+            <div class="badge">Google<br>Analytics</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-list-check"></i>
+          Management: 
+          <div class="badge-container">
+            <div class="badge">Jira</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="title">Backend</h2>
+    <div class="section">
+      <div class="section-content">
+        <div>
+          We developed several backend micro services. Each micro service was responsible for a specific section of the site (ie Quotes). If the site was experiencing a high work load on the Quotes pages, then the microservice for Quotes would scale up to the demand without affecting any other micro service.
+        </div>
+        <div>
+          These new services have improved logic as well as optimized database interactions. We utilized asynchronise calls to improve preformance relying on the database. This lowered the turnaround time (ie for getting a Quote) from over a minute to under 5 seconds.
+        </div>
+      </div>
+      <div class="section-stats">
+        <div class="stat">
+          <i class="fa-solid fa-cube"></i>
+          Framework: 
+          <div class="badge-container">
+            <div class="badge">NodeJS</div>
+            <div class="badge">Node<br>Express</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-globe"></i>
+          Languages: 
+          <div class="badge-container">
+            <div class="badge">Javascript</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-database"></i>
+          Databases: 
+          <div class="badge-container">
+            <div class="badge">AS400</div>
+            <div class="badge">MSSQL</div>
+          </div>
+        </div>
+        <div class="stat">
+          <i class="fa-solid fa-gear"></i>
+          Dev Ops: 
+          <div class="badge-container">
+            <div class="badge">GitLab</div>
+            <div class="badge">Docker</div>
+            <div class="badge">Kubernetes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="picture-section">
+      <div class="picture-content">
+        <img class="saia-website-picture" src="assets/saia_home.png">
+        <div class="image-text">Saia.com - Home Page</div>
+      </div>
+      <div class="picture-content">
+        <img class="saia-website-picture" src="assets/saia_quote.png">
+        <div class="image-text">Saia.com - Get a Quote Forum</div>
+      </div>
+    </div>
+  </div>
+</div>

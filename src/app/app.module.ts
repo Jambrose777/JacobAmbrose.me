@@ -54,12 +54,12 @@ const moduleRoutes: Routes = [
   ] },
   { path: 'skills', component: SkillsComponent, data: {animation: 'skils'}  },
   { path: 'slalom', component: SlalomComponent, data: {animation: 'slalom'}, children: [
-    { path: '', pathMatch: 'full', component: SubSlalomComponent },
-    { path: 'cox', component: CoxComponent },
-    { path: 'delta', component: DeltaComponent },
-    { path: 'pulte', component: PulteComponent },
-    { path: 'saia', component: SaiaComponent },
-    { path: 'slalom', component: SubSlalomComponent },
+    { path: '', pathMatch: 'full', component: SubSlalomComponent, data: {animation: 'slalom'} },
+    { path: 'cox', component: CoxComponent, data: {animation: 'cox'} },
+    { path: 'delta', component: DeltaComponent, data: {animation: 'delta'} },
+    { path: 'pulte', component: PulteComponent, data: {animation: 'pulte'} },
+    { path: 'saia', component: SaiaComponent, data: {animation: 'saia'} },
+    { path: 'slalom', component: SubSlalomComponent, data: {animation: 'slalom'} },
   ] },
   { path: 'wca', component: WcaComponent, data: {animation: 'wca'}, children: [
     { path: '', pathMatch: 'full', component: SubWcaComponent },
