@@ -1,0 +1,71 @@
+@import "src/styles/color-pallet.scss";
+
+.saia-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .title-details {
+      margin-top: 15px;
+    }
+  }
+
+  .right-align {
+    margin-left: auto;
+    padding-left: 10px;
+    align-items: flex-end;
+    text-align: end;
+  }
+
+  .stat-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    .content-text {
+      margin-bottom: 40px;
+    }
+
+    .stat {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .fa-solid {
+        padding-right: 5px;
+        color: $dark-blue;
+      }
+    }
+    
+    .badge-container {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap;
+
+      .badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: $dark-blue;
+        color: white;
+        margin: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+}
