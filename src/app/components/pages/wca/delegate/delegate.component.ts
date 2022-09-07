@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delegate.component.scss']
 })
 export class DelegateComponent implements OnInit {
+  stats = {
+    competed: 169,
+    organized: 55,
+    delegated: 115,
+  }
 
   constructor() { }
 

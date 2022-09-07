@@ -101,7 +101,7 @@ const moduleRoutes: Routes = [
     JacobAmbroseMeComponent,
     SoutheastCubingOrgComponent,
     WcaStatisticsComponent,
-    SheetsComponent
+    SheetsComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,10 +17,6 @@
   .title {
     margin-bottom: 20px;
     font-size: 20px;
-
-    .fa-solid {
-      color: $dark-blue;
-    }
   }
 
   .right-align {
@@ -28,6 +24,11 @@
     padding-left: 10px;
     align-items: flex-end;
     text-align: end;
+  }
+
+  .fa-solid {
+    padding-right: 5px;
+    color: $dark-blue;
   }
 
   .content {
