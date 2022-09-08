@@ -42,11 +42,11 @@
       margin-bottom: 40px;
       
       .left-stats {
-        padding-right: 5px;
+        padding-right: 10px;
       }
 
       .right-stats {
-        padding-left: 5px;
+        padding-left: 10px;
       }
 
       .content-section {
@@ -109,5 +109,25 @@
     &:hover {
       color: $dark-blue;
     }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-container {
+    flex-direction: column !important;
+  }
+
+  .content-section {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+      
+  .left-stats {
+    margin-bottom: 40px !important;
+  }
+
+  .mobile-bottom-margin {
+    margin-bottom: 40px;
   }
 }
