@@ -1,7 +1,7 @@
 <div class="hobbies-container">
   <div class="cubing-section">
     <div class="title-section">
-      <img src="assets/rubiks_cube.png" class="cube-picture">
+      <img src="{{getPhoto('about_rubiks_cube')}}" class="cube-picture">
       <h2 class="title clickable" [routerLink]="'/wca/competitor'">Cubing</h2>
     </div>
     <div class="cubing-body">
@@ -12,7 +12,7 @@
         In 2017 I attended 45 competitions in a year and acheieved 2,675 offical solves in 1 year, both of which were world records.
         <span class="clickable" [routerLink]="'/wca/competitor'">You can read more about my competive solving here.</span>
       </div>
-      <img class="cubing-picture" src="assets/787.png">
+      <img class="cubing-picture" src="{{getPhoto('about_solve_787')}}">
     </div>
   </div>
   <div class="mental-games-section">
@@ -29,7 +29,7 @@
   </div>
   <div class="mkt-section">
     <div class="title-section">
-      <img src="assets/MKT_badge.png" class="mkt-picture">
+      <img src="{{getPhoto('about_mkt_badge')}}" class="mkt-picture">
       <h2 class="title">Mario Kart</h2>
     </div>
     <div class="mkt-body">
@@ -38,7 +38,7 @@
         Following the tournament, Mario Kart Tour released on mobile devices in 2019 and I quickly took up the game.
         <a class="clickable" href="https://www.mariokarttour.com/en-US/ranking/allcup/backnumbers/detail?seasonKey=79" target="_blank">I ranked 3rd in the world during the Doctor Tour during May 2022.</a>
       </div>
-      <img class="mkt-picture" src="assets/MKT_trophy.png">
+      <img class="mkt-picture" src="{{getPhoto('about_mkt_trophy')}}">
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from 'src/app/services/contentful.service';
 
 @Component({
   selector: 'life',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LifeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit(): void {
+  }
+
+  getPhoto(key: string): string {
+    return this.contentfulService.getLoadedAsset(key);
   }
 
 }
