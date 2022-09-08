@@ -34,43 +34,7 @@ import { SoutheastCubingOrgComponent } from './components/pages/projects/southea
 import { WcaStatisticsComponent } from './components/pages/projects/wca-statistics/wca-statistics.component';
 import { SheetsComponent } from './components/pages/projects/sheets/sheets.component';
 
-const moduleRoutes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: window.innerWidth > 950 ? 'about' : 'home' },
-  { path: 'about', component: AboutComponent, data: {animation: 'about'}, children: [
-    { path: '', pathMatch: 'full', component: AboutMeComponent, data: {animation: 'me'} },
-    { path: 'hobbies', component: HobbiesComponent, data: {animation: 'hobbies'} },
-    { path: 'life', component: LifeComponent, data: {animation: 'life'} },
-    { path: 'me', component: AboutMeComponent, data: {animation: 'me'} },
-  ] },
-  { path: 'contact-me', component: ContactMeComponent, data: {animation: 'contact-me'}  },
-  { path: 'education', component: EducationComponent, data: {animation: 'education'}  },
-  window.innerWidth > 950 ? { path: 'home', pathMatch: 'full', redirectTo: 'about' } : { path: 'home', component: ProfileComponent },
-  { path: 'projects', component: ProjectsComponent, data: {animation: 'projects'}, children: [
-    { path: '', pathMatch: 'full', component: JacobAmbroseMeComponent },
-    { path: 'jacob-ambrose-me', component: JacobAmbroseMeComponent },
-    { path: 'sheets', component: SheetsComponent },
-    { path: 'southeast-cubing-org', component: SoutheastCubingOrgComponent },
-    { path: 'wca-statistics', component: WcaStatisticsComponent },
-  ] },
-  { path: 'skills', component: SkillsComponent, data: {animation: 'skils'}  },
-  { path: 'slalom', component: SlalomComponent, data: {animation: 'slalom'}, children: [
-    { path: '', pathMatch: 'full', component: SubSlalomComponent, data: {animation: 'slalom'} },
-    { path: 'cox', component: CoxComponent, data: {animation: 'cox'} },
-    { path: 'delta', component: DeltaComponent, data: {animation: 'delta'} },
-    { path: 'pulte', component: PulteComponent, data: {animation: 'pulte'} },
-    { path: 'saia', component: SaiaComponent, data: {animation: 'saia'} },
-    { path: 'slalom', component: SubSlalomComponent, data: {animation: 'slalom'} },
-  ] },
-  { path: 'wca', component: WcaComponent, data: {animation: 'wca'}, children: [
-    { path: '', pathMatch: 'full', component: SubWcaComponent },
-    { path: 'competitor', component: CompetitorComponent },
-    { path: 'delegate', component: DelegateComponent },
-    { path: 'results', component: ResultsComponent },
-    { path: 'teams', component: TeamsComponent },
-    { path: 'wca', component: SubWcaComponent },
-  ] },
-  { path: '**', redirectTo: 'about' },
-];
+// const moduleRoutes: Routes = ;
 
 @NgModule({
   declarations: [
@@ -106,7 +70,7 @@ const moduleRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(moduleRoutes),
+    // RouterModule.forRoot(moduleRoutes),
     BrowserAnimationsModule,
     MatMenuModule,
   ],
