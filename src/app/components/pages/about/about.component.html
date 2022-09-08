@@ -3,10 +3,10 @@
     <h2 class="page-title">About Me</h2>
     <sub-nav class="sub-nav" [navItems]="navItems" [baseRoute]="'about'"></sub-nav>
   </div>
-  <div *ngIf="!isMobile()" class="content-section" [@subContentAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']" >
+  <div *ngIf="!isMobile()" class="sub-router-container" [@subContentAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']" >
     <router-outlet #o="outlet"></router-outlet>
   </div>
-  <div *ngIf="isMobile()" class="content-section" >
+  <div *ngIf="isMobile()" class="sub-router-container" >
     <router-outlet #o="outlet"></router-outlet>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { AfterViewInit, ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 import { contentAnimations, navAnimation, profileAnimation, navAnimationMobile, contentAnimationsOpenMobile } from './animations';
 
 @Component({
@@ -12,10 +13,16 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'JacobAmbrose.me';
   previousWidth: number = 0;
 
-  constructor(private router: Router, private changeRef: ChangeDetectorRef) {}
+  constructor(private router: Router, private activeRoute: ActivatedRoute, private changeRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.previousWidth = window.innerWidth;
+
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+          const contentContainer = document.querySelector('.sub-router-container') || window;
+          contentContainer.scrollTo({ top: 0 });
+      });
   }
 
   ngAfterViewInit(): void {
