@@ -1,0 +1,38 @@
+@import "src/styles/color-pallet.scss";
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .title-details {
+    margin-top: 15px;
+  }
+
+  .right-align {
+    margin-left: auto;
+    padding-left: 10px;
+    align-items: flex-end;
+    text-align: end;
+  }
+
+  .content {
+    .content-text {
+      margin-bottom: 20px;
+    }
+  }
+
+  .fa-solid {
+    color: $dark-blue;
+  }
+}
