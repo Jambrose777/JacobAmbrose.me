@@ -1,0 +1,114 @@
+@import "src/styles/color-pallet.scss";
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    .title-details {
+      margin-top: 15px;
+    }
+  }
+
+  .right-align {
+    margin-left: auto;
+    padding-left: 10px;
+    align-items: flex-end;
+    text-align: end;
+  }
+
+  .content {
+    .content-text {
+      margin-bottom: 20px;
+
+      .title-container {
+        display: flex;
+        flex-direction: row;
+
+        .fa-solid {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .add-bottom-space {
+      margin-bottom: 40px;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+      
+      .left-stats {
+        padding-right: 10px;
+      }
+
+      .right-stats {
+        padding-left: 10px;
+      }
+
+      .content-section {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .fa-solid {
+          margin-bottom: 10px;
+        }
+
+        .black-text {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .fa-solid {
+    color: $dark-blue;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+  
+  .clickable {
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-container {
+    flex-direction: column !important;
+  }
+
+  .content-section {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+      
+  .left-stats {
+    margin-bottom: 40px !important;
+  }
+}

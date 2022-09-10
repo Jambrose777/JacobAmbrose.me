@@ -1,1 +1,91 @@
-<p>results works!</p>
+<div class="results-container">
+  <div class="header">
+    <h2 class="title">WCA Results Team Senior Member</h2>
+    <div class="title-details right-align">
+      <div class="date">
+        2017 - Present
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-text">
+      The WCA Results Team (WRT) is responsible for management of WCA's data. We verify, revise, and publish competition results on the WCA website including Regional Records and Rankings. 
+      We manage user's data and handle corrections to all data on WCA. Some of the more involved tasks have us utlizing MySQL and PhpMyAdmin to interactive with the production database.
+    </div>
+    <div class="content-text">
+      In addition, WRT is a go-to source for assistance with Results postings and incidents for WCA Delegates. 
+      We help Senior Delegates with promotions by giving insiteful background checks on prospective Delegates.
+      We run regular Sanity Checks on the database to ensure all of WCA's data is being correctly maintained.
+    </div>
+    <div class="content-text add-bottom-space">
+      I've posted <b>{{stats.results_posted}}</b> Competition Results. I've was promoted to be the first senior member of the team. 
+      I've been extremely active in many investigations done by WRT. I've also been a leading force in helping onboard new WRT members over the years.
+    </div>
+    <div class="content-container">
+      <div class="content-section left-stats">
+        <i class="fa-solid fa-shield-halved fa-3x"></i>
+        <b class="black-text">Data Protection Officer</b>
+        <div>
+          I am the current DPO of WCA. I act as a liason for consulting about data protection matters, especially concerning GDPR. 
+          I helped develop a process for anonymizing persons who wish to envoke their right to be forgotten. 
+          The team is currently working to improve data security for the organization.
+        </div>
+      </div>
+      <div class="content-section right-stats">
+        <i class="fa-solid fa-bullhorn fa-3x"></i>
+        <b class="black-text">Communication Officer</b>
+        <div>
+          The results team recieves over 1,000 emails every month. I am one of the communication officers who is in charge of making sure that all email threads get resolved; we follow up on any unresolved issues. 
+          I've also made a policy for our team to ensure that all of our team members are using proper communication channels and techniques when interacting with the organization.
+        </div>
+      </div>
+    </div>
+    <div class="content-text">
+      <div class="title-container">
+        <h2 class="title">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Investigations
+        </h2>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="content-section left-stats">
+        <i class="fa-solid fa-medal fa-3x"></i>
+        <b class="black-text">Records Anaylsis</b>
+        <div>
+          WRT is responsible for assigning and recognzining National, Contential and World records. 
+          These records are manually assigned (due to complex rules, they cannot be auto-assigned). 
+          There are instances where the same record may be broken at similar times at two different competitions. 
+          This investigation identifies those and allows us to correct any misassigned records.
+        </div>
+      </div>
+      <div class="content-section right-stats">
+        <i class="fa-solid fa-folder-open fa-3x"></i>
+        <b class="black-text">Backfilling Data</b>
+        <div>
+          WCA's software is constantly evolving. As such we have new features that are not supported on older competitions due to the data not being present.
+          Here are some of the fields that have been investigated and I have backfilled the data for:
+          Competition Organizers, Banned Competitors, Delegate Promotion dates, Team and Leader Dates, Main Events, and Series Competitions.
+        </div>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="content-section left-stats">
+        <i class="fa-solid fa-pen-to-square fa-3x"></i>
+        <b class="black-text">Fixing Inconsistencies</b>
+        <div>
+          There is some older data in WCA that required correcting. We continually investigate identifable mistakes in old results as well as look for ways to ensure that our results remain consistent world-wide.
+        </div>
+      </div>
+      <div class="content-section right-stats">
+        <i class="fa-solid fa-person-circle-exclamation fa-3x"></i>
+        <b class="black-text">Correcting Missing Ids</b>
+        <div>
+          There are some software issues that cause database entries to be deleted. This has caused foreign keys to point to an id that does not exist.
+          For Example, this has happened a lot with users' accounts.
+          I've worked to identify these and assign correct foreign key ids for these cases; as well, we've worked to identify errors in the software that cause these types of issues.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
