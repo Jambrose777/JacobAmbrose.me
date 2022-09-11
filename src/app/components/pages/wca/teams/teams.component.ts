@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from 'src/app/services/contentful.service';
 
 @Component({
   selector: 'app-teams',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teams.component.scss']
 })
 export class TeamsComponent implements OnInit {
+  stats = {
+    deputy: 25,
+  }
 
-  constructor() { }
+  constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit(): void {
+    this.contentfulService.getContentfulEntry('stats').subscribe(res => {
+      this.stats.deputy = res?.fields?.competitionsDeputied || this.stats.deputy;
+    })
   }
 
 }
