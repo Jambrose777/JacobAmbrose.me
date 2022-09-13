@@ -7,10 +7,9 @@ import { LifeComponent } from './components/pages/about/life/life.component';
 import { ContactMeComponent } from './components/pages/contact-me/contact-me.component';
 import { EducationComponent } from './components/pages/education/education.component';
 import { JacobAmbroseMeComponent } from './components/pages/projects/jacob-ambrose-me/jacob-ambrose-me.component';
+import { OtherComponent } from './components/pages/projects/other/other.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
-import { SheetsComponent } from './components/pages/projects/sheets/sheets.component';
 import { SoutheastCubingOrgComponent } from './components/pages/projects/southeast-cubing-org/southeast-cubing-org.component';
-import { WcaStatisticsComponent } from './components/pages/projects/wca-statistics/wca-statistics.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { CoxComponent } from './components/pages/slalom/cox/cox.component';
 import { DeltaComponent } from './components/pages/slalom/delta/delta.component';
@@ -38,11 +37,10 @@ const routes: Routes = [
   { path: 'education', component: EducationComponent, data: {animation: 'education'}  },
   window.innerWidth > 950 ? { path: 'home', pathMatch: 'full', redirectTo: 'about' } : { path: 'home', component: ProfileComponent },
   { path: 'projects', component: ProjectsComponent, data: {animation: 'projects'}, children: [
-    { path: '', pathMatch: 'full', component: JacobAmbroseMeComponent },
-    { path: 'jacob-ambrose-me', component: JacobAmbroseMeComponent },
-    { path: 'sheets', component: SheetsComponent },
-    { path: 'southeast-cubing-org', component: SoutheastCubingOrgComponent },
-    { path: 'wca-statistics', component: WcaStatisticsComponent },
+    { path: '', pathMatch: 'full', component: JacobAmbroseMeComponent, data: {animation: 'jacob-ambrose-me'}  },
+    { path: 'jacob-ambrose-me', component: JacobAmbroseMeComponent, data: {animation: 'jacob-ambrose-me'} },
+    { path: 'other', component: OtherComponent, data: {animation: 'other'} },
+    { path: 'southeast-cubing-org', component: SoutheastCubingOrgComponent, data: {animation: 'southeast-cubing-org'} },
   ] },
   { path: 'skills', component: SkillsComponent, data: {animation: 'skils'}  },
   { path: 'slalom', component: SlalomComponent, data: {animation: 'slalom'}, children: [

@@ -1,6 +1,6 @@
 @import "src/styles/color-pallet.scss";
 
-.sec-container {
+.projects-other-container {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
@@ -12,12 +12,6 @@
     a {
       display: flex;
       flex-direction: row;
-    }
-
-    .se-logo {
-      height: 40px;
-      padding-right: 10px;
-      margin-top: 7px;
     }
   }
 

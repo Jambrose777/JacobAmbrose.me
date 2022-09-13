@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WcaStatisticsComponent } from './wca-statistics.component';
+import { OtherComponent } from './other.component';
 
-describe('WcaStatisticsComponent', () => {
-  let component: WcaStatisticsComponent;
-  let fixture: ComponentFixture<WcaStatisticsComponent>;
+describe('OtherComponent', () => {
+  let component: OtherComponent;
+  let fixture: ComponentFixture<OtherComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WcaStatisticsComponent ]
+      declarations: [ OtherComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(WcaStatisticsComponent);
+    fixture = TestBed.createComponent(OtherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

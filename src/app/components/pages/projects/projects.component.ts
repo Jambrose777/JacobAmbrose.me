@@ -12,8 +12,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   navItems: NavItem[] = [
     { title: 'JacobAmbrose.me', route: 'jacob-ambrose-me' },
     { title: 'SoutheastCubing.org', route: 'southeast-cubing-org' },
-    { title: 'WCA Statistics', route: 'wca-statistics' },
-    { title: 'Sheets', route: 'sheets' },
+    { title: 'Other Projects', route: 'other' },
   ];
   collapsedNav: boolean = false;
   title: string = 'Personal Projects';
@@ -21,9 +20,8 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   constructor(private changeRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.navItems[2].title = window.innerWidth > 1600 || window.innerWidth <= 1550 ? 'WCA Statistics' : 'WCA Stats';
     this.title = window.innerWidth >= 1030 ? 'Personal Projects' : 'Projects';
-    this.collapsedNav = window.innerWidth <= 1550;
+    this.collapsedNav = window.innerWidth <= 1465;
   }
 
   ngAfterViewInit(): void {
@@ -32,9 +30,8 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.navItems[2].title = window.innerWidth > 1600 || window.innerWidth <= 1550 ? 'WCA Statistics' : 'WCA Stats';
     this.title = window.innerWidth >= 1030 ? 'Personal Projects' : 'Projects';
-    this.collapsedNav = window.innerWidth <= 1550;
+    this.collapsedNav = window.innerWidth <= 1465;
   }
 
   isMobile(): boolean {

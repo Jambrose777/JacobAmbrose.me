@@ -31,9 +31,8 @@ import { TeamsComponent } from './components/pages/wca/teams/teams.component';
 import { CompetitorComponent } from './components/pages/wca/competitor/competitor.component';
 import { JacobAmbroseMeComponent } from './components/pages/projects/jacob-ambrose-me/jacob-ambrose-me.component';
 import { SoutheastCubingOrgComponent } from './components/pages/projects/southeast-cubing-org/southeast-cubing-org.component';
-import { WcaStatisticsComponent } from './components/pages/projects/wca-statistics/wca-statistics.component';
-import { SheetsComponent } from './components/pages/projects/sheets/sheets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OtherComponent } from './components/pages/projects/other/other.component';
 
 @NgModule({
   declarations: [
@@ -63,8 +62,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CompetitorComponent,
     JacobAmbroseMeComponent,
     SoutheastCubingOrgComponent,
-    WcaStatisticsComponent,
-    SheetsComponent,
+    OtherComponent,
   ],
   imports: [
     BrowserModule,
