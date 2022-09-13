@@ -15,10 +15,16 @@
       <i class="fa-brands fa-linkedin fa-2xl clickable"></i>
     </a>
   </div>
-  <div class="profile-resume-link clickable">
-    <a href="https://docs.google.com/document/d/1YmTaebvlb7ch3nTl8HHY6mOcCNc8WQNX9tAEKCM0EIk/export?format=pdf" target="_blank">
-      <i class="fa-solid fa-download fa-lg"></i>
-      <div>Resume</div>
-    </a>
+  <div class="bottom-buttons-container">
+    <div class="bottom-button-link clickable">
+      <a href="https://docs.google.com/document/d/1YmTaebvlb7ch3nTl8HHY6mOcCNc8WQNX9tAEKCM0EIk/export?format=pdf" target="_blank">
+        <i class="fa-solid fa-download fa-lg"></i>
+        <div>Resume</div>
+      </a>
+    </div>
+    <div class="bottom-button-link clickable" [routerLink]="'/contact-me'" >
+      <i class="fa-solid fa-envelope fa-lg"></i>
+      <div>Contact Me</div>
+    </div>
   </div>
 </div>

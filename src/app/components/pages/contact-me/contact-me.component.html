@@ -3,6 +3,34 @@
     <h2 class="page-title">Contact Me</h2>
   </div>
   <div class="content-section">
-    
+    <div *ngIf="showSuccess" class="success-box">
+      Your message has been sent!
+    </div>
+    <div *ngIf="showError" class="error-box">
+      An error occured while trying to send your message.
+    </div>
+    <form (ngSubmit)="submitForm()" class="form" [formGroup]="contactForm">
+      <div class="form-row">
+        <div class="field field-left">
+          <label class="label" [ngClass]="{ 'error-label': contactForm.get('name').touched && contactForm.get('name').invalid }">Name</label>
+          <input type="text" name="name" class="input" formControlName="name">
+          <small *ngIf="contactForm.get('name').touched && contactForm.get('name').invalid" class="error-text">Name is required</small>
+        </div>
+        <div class="field field-right">
+          <label class="label" [ngClass]="{ 'error-label': contactForm.get('email').touched && contactForm.get('email').invalid }">Email</label>
+          <input type="email" name="email" class="input" formControlName="email">
+          <small *ngIf="contactForm.get('email').touched && contactForm.get('email').invalid" class="error-text">Must be a valid email</small>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" [ngClass]="{ 'error-label': contactForm.get('message').touched && contactForm.get('message').invalid }">Your Message</label>
+        <textarea name="message" class="textarea" formControlName="message"></textarea>
+        <small *ngIf="contactForm.get('message').touched && contactForm.get('message').invalid" class="error-text">Message is required</small>
+      </div>
+      <button type="submit" class="button" [disabled]="disableButton">
+        Send Message
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
   </div>
 </div>

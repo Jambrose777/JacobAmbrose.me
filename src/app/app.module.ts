@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,8 +33,7 @@ import { JacobAmbroseMeComponent } from './components/pages/projects/jacob-ambro
 import { SoutheastCubingOrgComponent } from './components/pages/projects/southeast-cubing-org/southeast-cubing-org.component';
 import { WcaStatisticsComponent } from './components/pages/projects/wca-statistics/wca-statistics.component';
 import { SheetsComponent } from './components/pages/projects/sheets/sheets.component';
-
-// const moduleRoutes: Routes = ;
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -70,9 +69,11 @@ import { SheetsComponent } from './components/pages/projects/sheets/sheets.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // RouterModule.forRoot(moduleRoutes),
     BrowserAnimationsModule,
     MatMenuModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

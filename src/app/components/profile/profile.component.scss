@@ -62,25 +62,34 @@
     }
   }
 
-  .profile-resume-link {
+  .bottom-buttons-container {
     width: 100%;
     margin-top: auto;
     margin-bottom: 20px;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 20px;
+    display: flex;
+    flex-direction: row;
 
-    a {
-      text-decoration: none;
-      color: black;
+    .bottom-button-link {
+      width: 50%;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 20px;
       display: flex;
       flex-direction: row;
       justify-content: center;
-
-      &:hover {
-        color: $dark-blue;
+  
+      a {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+  
+        &:hover {
+          color: $dark-blue;
+        }
       }
-
+  
       .fa-solid {
         margin-right: 10px;
         margin-top: 10px;

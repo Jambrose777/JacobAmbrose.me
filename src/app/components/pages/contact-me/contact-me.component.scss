@@ -24,7 +24,121 @@
   }
 
   .content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
     overflow-y: scroll;
+
+    .success-box {
+      padding: 10px;
+      margin-bottom: 40px;
+      background-color: $aqua;
+      text-align: center;
+    }
+
+    .error-box {
+      padding: 10px;
+      margin-bottom: 40px;
+      background-color: $red;
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      .form-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        .field {
+          width: 50%;
+        }
+
+        .field-left {
+          margin-right: 20px;
+        }
+
+        .field-right {
+          margin-left: 20px;
+        }
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .label {
+          font-weight: 600;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
+
+        .error-label {
+          color: $red;
+        }
+        
+        .input {
+          padding: 10px;
+          border: none;
+          border-radius: 10px;
+        }
+
+        .textarea {
+          height: 250px;
+          padding: 10px;
+          border: none;
+          border-radius: 10px;
+          resize: none;
+        }
+
+        .error-text {
+          color: $red;
+          margin: 5px 0 -20px 20px;
+        }
+      }
+
+      .button {
+        max-width: 200px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: $dark-grey;
+        font-size: 20px;
+
+        .fa-solid {
+          color: $dark-blue;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active {
+          box-shadow: 3px rgb(0 0 0 / 0.4);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .form-row {
+    flex-direction: column !important;
+
+    .field {
+      width: 100% !important;
+    }
+
+    .field-left {
+      margin-right: 0 !important;
+    }
+
+    .field-right {
+      margin-left: 0 !important;
+    }
   }
 }
 
