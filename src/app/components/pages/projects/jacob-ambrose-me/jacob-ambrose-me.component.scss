@@ -65,8 +65,18 @@
   .fa-solid {
     color: $dark-blue;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
   
   .clickable {
+    color: $purple;
     cursor: pointer;
 
     &:hover {
