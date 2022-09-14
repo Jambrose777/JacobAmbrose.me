@@ -3,31 +3,81 @@
     <h2 class="page-title">Skills / Technologies</h2>
   </div>
   <div class="content-section">
+    <div class="top-section">
+      <div class="big-skills-section">
+        <h2 class="title">
+          <i class="fa-solid fa-book"></i>
+          Frameworks, Platforms, Libraries
+        </h2>
+        <div class="big-skill-container">
+          <div class="big-skill-line-extra"></div>
+        </div>
+        <ng-container *ngFor="let skill of bigSkills">
+          <div class="big-skill-container">
+            <div class="big-skill">
+              <div class="big-skill-text">
+                {{skill.skill}}
+              </div>
+            </div>
+            <div class="big-skill-line"></div>
+            <div class="big-skill-proficency">
+              <div class="big-skill-proficency-text" [ngClass]="{ 'moderate': skill.proficency === 1, 'proficient': skill.proficency === 2, 'expert': skill.proficency === 3 }">
+                {{ skill.proficency === 1 ? 'Moderate' : skill.proficency === 2 ? 'Proficient' : 'Expert' }}
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <div class="big-skill-container">
+          <div class="big-skill-line-extra"></div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="languages-section">
+          <h2 class="title">
+            <i class="fa-solid fa-language"></i>
+            Languages
+          </h2>
+          <div class="language-pill-container">
+            <ng-container *ngFor="let language of languages">
+              <div class="language-pill">
+                {{language}}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="databases-section">
+          <h2 class="title">
+            <i class="fa-solid fa-database"></i>
+            Databases
+          </h2>
+          <div class="db-top"></div>
+          <ng-container *ngFor="let db of databases">
+            <div class="db-slab">
+              <div class="db-slab-text">
+                {{db}}
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="applications-section">
+      <h2 class="title">
+        <i class="fa-solid fa-wrench"></i>
+        Applications, Tools
+      </h2>
+      <div class="application-container">
+        <ng-container *ngFor="let app of applications">
+          <div class="application" ngClass="{{app.class}}">
+            {{app.app}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- Angular, Node JS, Node Express, Springboot, React, ASP.NET -->
 
-<!-- Typescript, Javascript, SCSS, HTML, VB, D3, Java, C#, C++, php, ruby on rails -->
 
-<!-- AS400, MSSQL, Teradata, DynamoDB, NgRx, Reddis, SQL Azure, MySQL, PhpMyAdmin -->
-
-<!-- Contentful, Google Anayltics, Docker, Kubernettes, Font Awesome, new Relic, Adobe Analytics -->
-
-<!-- Jira, GitLab, OpenShift, AWS, GitHub Enterprises, Mira, Rally, Azure DevOps, terraform -->
-
-<!-- Swagger -->
-
-<!-- Angular forms, Alphavision -->
-
-<!-- Google sheets, GSuite -->
-
-<!-- Angular Forms, Angular Animations -->
-
-<!-- Apache, Nginx -->
-
-<!-- AWS (EC2, S3, Route 53) -->
-
-<!-- Google Domains -->
-
-<!-- MySQL cpp -->

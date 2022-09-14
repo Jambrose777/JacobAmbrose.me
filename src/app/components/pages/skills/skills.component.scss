@@ -1,5 +1,7 @@
 @import "src/styles/color-pallet.scss";
 
+$bigSkillWidth: 137px;
+
 .skills-container {
   height: calc(100vh - 120px);
   width: calc((100vw - 190px) * .5);
@@ -25,6 +27,226 @@
 
   .content-section {
     overflow-y: scroll;
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .top-section {
+      display: flex;
+      flex-direction: row;
+
+      .right-section {
+        display: flex;
+        flex-direction: column;
+        width: calc(40% - 20px);
+      }
+    }
+
+    .big-skills-section {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: calc(60% - 20px);
+
+      .big-skill-container {
+        display: flex;
+        flex-direction: row;
+
+        .big-skill {
+          width: $bigSkillWidth;
+          display: flex;
+          flex-direction: row;
+          margin: 2px 0 2px 0;
+
+          .big-skill-text {
+            padding: 5px 5px 5px 10px;
+            border-radius: 10px 0 0 10px;
+            background-color: $dark-blue;
+            color: white;
+            margin-left: auto;
+            font-size: 12px;
+          }
+        }
+
+        .big-skill-line {
+          width: 2px;
+          background-color: $black;
+        }
+
+        .big-skill-line-extra {
+          width: 2px;
+          height: 10px;
+          margin-left: $bigSkillWidth;
+          background-color: $black;
+        }
+
+        .big-skill-proficency {
+          width: calc(100% - $bigSkillWidth - 2px);
+          display: flex;
+          flex-direction: row;
+          margin: 2px 0 2px 0;
+
+          .big-skill-proficency-text {
+            padding: 5px;
+            border-radius: 0 10px 10px 0;
+            background-color: $aqua;
+            margin-right: auto;
+            font-size: 12px;
+          }
+
+          .moderate {
+            width: 40%;
+          }
+
+          .proficient {
+            width: 70%;
+          }
+
+          .expert {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .languages-section {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .language-pill-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .language-pill {
+          margin: 5px;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: $dark-blue;
+          color: white;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .databases-section {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      align-items: center;
+
+      .db-top {
+        width: 100px;
+        height: 50px;
+        background: $dark-blue;
+        border-radius: 50px/20px 20px 20px 20px;
+      }
+
+      .db-slab {
+        position: relative;
+        margin-top: 5px;
+        width: 100px;
+        height: 0;
+        margin-bottom: 20px;
+        background: $dark-blue;
+        color: white;
+        border-radius: 0 0 50px 50px/20px;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 12px;
+
+        .db-slab-text {
+          position: absolute;
+          width: 100%;
+        }
+      }
+      
+      .db-slab::before {
+        content: "";
+        position: absolute;
+        
+        background-color: transparent;
+        top: -50px;
+        left: 0;
+        height: 50px;
+        width: 100px;
+        border-radius: 0 0 50px 50px/20px;
+        box-shadow: 0 25px $dark-blue;
+      }
+    }
+
+    .applications-section {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: calc(100% - 20px);
+
+      .application-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .application {
+          padding: 5px;
+          font-size: 12px;
+          // background-color: $dark-grey;
+          margin: 2px;
+          border-radius: 5px;
+        }
+
+        .aqua {
+          background-color: $aqua;
+        }
+
+        .black {
+          background-color: $black;
+          color: white;
+        }
+
+        .dark-blue {
+          background-color: $dark-blue;
+          color: white;
+        }
+
+        .dark-grey {
+          background-color: $dark-grey;
+        }
+
+        .light-blue {
+          background-color: $light-blue;
+        }
+
+        .purple {
+          background-color: $purple;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .fa-solid {
+    color: $dark-blue;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .top-section {
+    flex-direction: column !important;
+  }
+
+  .big-skills-section {
+    width: calc(100% - 20px) !important;
+  }
+
+  .right-section {
+    width: calc(100% - 20px) !important;
   }
 }
 
