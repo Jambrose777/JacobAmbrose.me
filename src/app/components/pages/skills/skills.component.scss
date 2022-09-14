@@ -195,18 +195,12 @@ $bigSkillWidth: 137px;
         .application {
           padding: 5px;
           font-size: 12px;
-          // background-color: $dark-grey;
           margin: 2px;
           border-radius: 5px;
         }
 
         .aqua {
           background-color: $aqua;
-        }
-
-        .black {
-          background-color: $black;
-          color: white;
         }
 
         .dark-blue {
@@ -216,15 +210,6 @@ $bigSkillWidth: 137px;
 
         .dark-grey {
           background-color: $dark-grey;
-        }
-
-        .light-blue {
-          background-color: $light-blue;
-        }
-
-        .purple {
-          background-color: $purple;
-          color: white;
         }
       }
     }
