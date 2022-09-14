@@ -13,18 +13,18 @@
       <div class="form-row">
         <div class="field field-left">
           <label class="label" [ngClass]="{ 'error-label': contactForm.get('name').touched && contactForm.get('name').invalid }">Name</label>
-          <input type="text" name="name" class="input" formControlName="name">
+          <input type="text" name="name" class="input" formControlName="name" [ngClass]="{ 'error-input': contactForm.get('name').touched && contactForm.get('name').invalid }">
           <small *ngIf="contactForm.get('name').touched && contactForm.get('name').invalid" class="error-text">Name is required</small>
         </div>
         <div class="field field-right">
           <label class="label" [ngClass]="{ 'error-label': contactForm.get('email').touched && contactForm.get('email').invalid }">Email</label>
-          <input type="email" name="email" class="input" formControlName="email">
+          <input type="email" name="email" class="input" formControlName="email" [ngClass]="{ 'error-input': contactForm.get('email').touched && contactForm.get('email').invalid }">
           <small *ngIf="contactForm.get('email').touched && contactForm.get('email').invalid" class="error-text">Must be a valid email</small>
         </div>
       </div>
       <div class="field">
         <label class="label" [ngClass]="{ 'error-label': contactForm.get('message').touched && contactForm.get('message').invalid }">Your Message</label>
-        <textarea name="message" class="textarea" formControlName="message"></textarea>
+        <textarea name="message" class="textarea" formControlName="message" [ngClass]="{ 'error-input': contactForm.get('message').touched && contactForm.get('message').invalid }"></textarea>
         <small *ngIf="contactForm.get('message').touched && contactForm.get('message').invalid" class="error-text">Message is required</small>
       </div>
       <button type="submit" class="button" [disabled]="disableButton">

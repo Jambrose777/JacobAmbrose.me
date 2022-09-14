@@ -86,16 +86,22 @@
         
         .input {
           padding: 10px;
-          border: none;
           border-radius: 10px;
+          background-color: $grey;
+          border: 2px solid $black;
         }
 
         .textarea {
           height: 250px;
           padding: 10px;
-          border: none;
           border-radius: 10px;
           resize: none;
+          background-color: $grey;
+          border: 2px solid $black;
+        }
+
+        .error-input {
+          border: 2px solid $red;
         }
 
         .error-text {

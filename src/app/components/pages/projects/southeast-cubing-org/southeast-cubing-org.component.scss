@@ -71,6 +71,30 @@
         margin-right: auto;
       }
     }
+    
+    .picture-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+
+      .picture-content {
+        width: 100%;
+        margin-bottom: 20px;
+
+        .sec-website-picture {
+          width: 100%;
+          max-height: 400px;
+          object-fit: contain;
+          border: 2px solid $black;
+        }
+
+        .image-text {
+          text-align: center;
+          font-style: italic;
+          color: $black;
+        }
+      }
+    }
   }
 
   .fa-solid {

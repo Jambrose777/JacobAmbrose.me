@@ -22,6 +22,7 @@ export const contentfulKeys = {
     saia_home: '2e90CZpA53IZgLAgft8517',
     saia_quote: '3BlgHTh9Q9FLzut0uMCAS7',
     slalom_office: '5VUScYzGVvZT4k6NSrPsCO',
+    southeast_cubing_org_website: '25tKV3goJSIdxhHmDjQuXO',
     uga_logo: 'D9N0twhsEqYYJeQkdiAUN',
     wca_delegates: '6lN0GgenIvOfPkIfiN0YFg',
     wca_worlds_solving: '7paBVTpSvyx3Z3FlpRJOGD',
